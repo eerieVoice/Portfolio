@@ -8,7 +8,7 @@ function Navbar() {
     { name: 'About', link: './About' },
     { name: 'Experience', link: './Experience' },
     { name: 'Projects', link: '' },
-    { name: 'Contact Me', link: './Contact' },
+    // { name: 'Contact Me', link: './Contact' },
   ];
   return (
     <div className="border-b-4 border-[#141414] bg-backg">
@@ -24,7 +24,9 @@ function Navbar() {
         </div>
         <ul
           className={`absolute left-0 z-[1] mt-[1em] w-full bg-backg pb-8 pl-9 text-sm font-medium text-textnani shadow-white sm:static sm:z-auto sm:mt-[0em] sm:flex sm:w-auto sm:items-center sm:gap-[1.60em] sm:bg-transparent sm:pb-0 sm:pl-0 ${
-            open ? 'top-[3.1rem] opacity-100' : 'top-[-400px]'
+            open
+              ? 'top-[3.1rem] min-h-screen text-[1.5rem] opacity-100'
+              : 'top-[-400px]'
           } opacity-0 sm:opacity-100`}
         >
           {Links.map((link) => (

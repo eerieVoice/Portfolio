@@ -16,7 +16,7 @@ const ProjectsList: React.FC<props> = ({
   tools,
 }) => {
   return (
-    <div className="mb-10 w-full sm:flex sm:flex-row sm:items-center sm:justify-items-start">
+    <div className="mb-10 flex w-full flex-col gap-[1em] sm:flex sm:flex-row sm:items-center sm:justify-items-start sm:gap-0">
       <div className="mx-auto aspect-square max-h-[300px] max-w-[300px] rounded border-2 border-textnani sm:mx-0">
         <img
           src={img}
