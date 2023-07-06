@@ -15,7 +15,7 @@ function Experience() {
   };
 
   return (
-    <div className="bg-backg text-textnani">
+    <div className="bg-backg text-textnani" id="experience">
       <div className="mx-auto my-0 w-[85%] max-w-[1200px]">
         <div className="sm:flex">
           <div className="py-[3em]  text-textnani sm:w-[100%]">
