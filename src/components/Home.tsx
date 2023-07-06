@@ -6,8 +6,6 @@ function Home() {
     intro: `Hello i'm Jemuel Maglupay`,
     secondary:
       'A Computer Engineering Graduate who is passionate in Software Developement',
-    tertiary:
-      'I honed my practical abilities in both hardware and software, and as I gained more experience, I found myself increasingly drawn to the world of Software development',
   };
 
   return (
@@ -23,9 +21,7 @@ function Home() {
             <p className="my-2 text-md font-medium leading-[1.5em] ">
               {description.secondary}
             </p>
-            <div className="my-2 text-justify text-md font-medium leading-[1.5em]  text-opacity-80">
-              {description.tertiary}
-            </div>
+
             <button className="rounded border border-accentpo bg-transparent px-4 py-2 font-semibold text-textnani duration-200 hover:scale-105 hover:border-transparent hover:bg-accentpo">
               Resume
             </button>

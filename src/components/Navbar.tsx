@@ -5,10 +5,10 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const nameLogo = '<Jemuel M/>';
   const Links = [
-    { name: 'About', link: '/' },
-    { name: 'Experience', link: '/' },
-    { name: 'Projects', link: '/' },
-    { name: 'Contact Me', link: '/' },
+    { name: 'About', link: './About' },
+    { name: 'Experience', link: './Experience' },
+    { name: 'Projects', link: '' },
+    { name: 'Contact Me', link: './Contact' },
   ];
   return (
     <div className="border-b-4 border-[#141414] bg-backg">
