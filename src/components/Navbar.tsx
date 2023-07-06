@@ -35,7 +35,13 @@ function Navbar() {
               key={link.name}
               className="mt-[1em] whitespace-nowrap uppercase duration-200 hover:scale-105 hover:cursor-pointer hover:text-white active:text-primarypo sm:mt-0 sm:underline-offset-8 sm:hover:underline"
             >
-              <HashLink spy={true} to={link.link} smooth={true} duration={500}>
+              <HashLink
+                spy={true}
+                to={link.link}
+                smooth={true}
+                duration={500}
+                onClick={() => setOpen(!open)}
+              >
                 {link.name}
               </HashLink>
             </li>
