@@ -30,7 +30,7 @@ function Navbar() {
       }`}
     >
       <nav
-        className={`mx-auto my-0 w-[85%] max-w-[1200px] items-center justify-between py-[1em] sm:flex sm:items-center`}
+        className={`mx-auto my-0 w-[85%] max-w-[1200px] items-center justify-between bg-backg py-[1em] sm:flex sm:items-center sm:bg-opacity-80`}
       >
         <h1 className="cursor-pointer whitespace-nowrap font-logo text-[1.75rem] font-semibold text-primarypo">
           <HashLink to="home" smooth={true} duration={500}>
@@ -46,7 +46,7 @@ function Navbar() {
         <ul
           className={`absolute left-0 z-[1] mt-[1em] w-full bg-backg pb-8 pl-9 text-sm font-medium text-textnani shadow-white sm:static sm:z-auto sm:mt-[0em] sm:flex sm:w-auto sm:items-center sm:gap-[1.60em] sm:bg-transparent sm:pb-0 sm:pl-0 ${
             open
-              ? 'top-[3.1rem] min-h-screen text-[1.5rem] opacity-100 sm:min-h-0'
+              ? 'top-[3.1rem] min-h-screen text-[1.5rem] text-primarypo opacity-100 sm:min-h-0'
               : 'top-[-400px]'
           } opacity-0 sm:opacity-100`}
         >
