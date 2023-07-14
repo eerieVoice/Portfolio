@@ -1,5 +1,6 @@
 import { AcademicCapIcon } from '@heroicons/react/24/outline';
 import React from 'react';
+import { motion } from 'framer-motion';
 AcademicCapIcon;
 const About: React.FC = () => {
   const aboutMe = {
@@ -19,7 +20,7 @@ const About: React.FC = () => {
     },
   };
   return (
-    <div className="bg-backg text-textnani " id="about">
+    <div className="bg-backg py-[3em] text-textnani " id="about">
       <div className="mx-auto my-0 w-[85%] max-w-[1200px]">
         <div className="flex max-w-[40ch] flex-col gap-[1em] text-md">
           <h1
@@ -28,16 +29,36 @@ const About: React.FC = () => {
           >
             {aboutMe.title}
           </h1>
-          <p>{aboutMe.about}</p>
-          <p>{aboutMe.description}</p>
+          <motion.p
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+          >
+            {aboutMe.about}
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: -100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+          >
+            {aboutMe.description}
+          </motion.p>
           <div>
-            <p className="text-accentpo">{aboutMe.education.school}</p>
+            <motion.p
+              initial={{ opacity: 0, y: -100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2 }}
+              className="text-accentpo"
+            >
+              {aboutMe.education.school}
+            </motion.p>
             <p className="text-lg">{aboutMe.education.course}</p>
             <p className="text-lg opacity-80">{aboutMe.education.year}</p>
             <p className="flex gap-1 text-lg opacity-60">
               <AcademicCapIcon className="h-6 w-6" />
               {aboutMe.education.award.first}
             </p>
+
             <p className="flex gap-1 text-lg opacity-60">
               <AcademicCapIcon className="h-6 w-6" />
               {aboutMe.education.award.second}

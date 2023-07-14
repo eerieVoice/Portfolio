@@ -19,8 +19,8 @@ export default {
         logo: ['Playfair Display', 'serif'],
       },
       fontSize: {
-        xl: 'clamp(1.25rem, 3.5vw, 2rem)',
-        md: 'clamp(1.125rem, 2.5vw, 1.5rem)',
+        xl: 'clamp(1.5rem, 3.5vw, 2rem)',
+        md: 'clamp(1.25rem, 2.5vw, 1.5rem)',
       },
     },
   },

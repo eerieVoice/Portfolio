@@ -4,18 +4,38 @@ import { Link as HashLink } from 'react-scroll';
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [fix, setFix] = useState<boolean>(false);
+
+  const setFixed = (): void => {
+    if (window.scrollY >= 75) {
+      setFix(true);
+    } else {
+      setFix(false);
+    }
+  };
+  window.addEventListener('scroll', setFixed);
   const nameLogo = '<Jemuel M/>';
   const Links = [
     { name: 'About', link: 'about' },
     { name: 'Experience', link: 'experience' },
     { name: 'Projects', link: 'projects' },
-    // { name: 'Contact Me', link: './Contact' },
+    { name: 'Contact Me', link: 'contact' },
   ];
   return (
-    <div className="border-b-4 border-[#141414] bg-backg">
-      <nav className="mx-auto my-0 w-[85%] max-w-[1200px] items-center justify-between py-[1em] sm:flex sm:items-center">
+    <div
+      className={`bg-backg  ${
+        fix
+          ? 'fixed left-[50%] z-20 w-screen translate-x-[-50%] bg-opacity-80 ease-linear'
+          : 'static'
+      }`}
+    >
+      <nav
+        className={`mx-auto my-0 w-[85%] max-w-[1200px] items-center justify-between py-[1em] sm:flex sm:items-center`}
+      >
         <h1 className="cursor-pointer whitespace-nowrap font-logo text-[1.75rem] font-semibold text-primarypo">
-          <a href="/">{nameLogo}</a>
+          <HashLink to="home" smooth={true} duration={500}>
+            {nameLogo}
+          </HashLink>
         </h1>
         <div
           onClick={() => setOpen(!open)}
@@ -33,13 +53,14 @@ function Navbar() {
           {Links.map((link) => (
             <li
               key={link.name}
-              className="mt-[1em] whitespace-nowrap uppercase duration-200 hover:scale-105 hover:cursor-pointer hover:text-white active:text-primarypo sm:mt-0 sm:underline-offset-8 sm:hover:underline"
+              className="mt-[1em] whitespace-nowrap uppercase duration-200 hover:scale-105 hover:cursor-pointer hover:text-white  sm:mt-0 sm:underline-offset-8 sm:hover:underline"
             >
               <HashLink
                 spy={true}
                 to={link.link}
                 smooth={true}
                 duration={500}
+                offset={-50}
                 onClick={() => setOpen(!open)}
               >
                 {link.name}

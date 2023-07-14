@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowLongRightIcon } from '@heroicons/react/24/outline';
-
+import { motion } from 'framer-motion';
 interface props {
   details: string;
   pjLink: string;
@@ -16,7 +16,12 @@ const ProjectsList: React.FC<props> = ({
   tools,
 }) => {
   return (
-    <div className="mb-10 flex w-full flex-col gap-[1em] sm:flex sm:flex-row sm:items-center sm:justify-items-start sm:gap-0">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="mb-10 flex w-full flex-col gap-[1em] sm:flex sm:flex-row sm:items-center sm:justify-items-start sm:gap-0"
+    >
       <div className="mx-auto aspect-square max-h-[300px] max-w-[300px] rounded border-2 border-textnani sm:mx-0">
         <img
           src={img}
@@ -25,7 +30,7 @@ const ProjectsList: React.FC<props> = ({
         />
       </div>
 
-      <div className="mb-[1em] h-full bg-textnani py-[2em] pl-[1em] text-backg backdrop-blur sm:mb-0">
+      <div className="mb-[1em] h-full bg-white py-[2em] pl-[1em] text-backg backdrop-blur sm:mb-0">
         <p className="max-w-[35ch] text-md font-semibold">{details}</p>
         <p className="opacity-60">{tools}</p>
         <div className="flex gap-2 duration-150 hover:ml-1 hover:text-primarypo">
@@ -40,7 +45,7 @@ const ProjectsList: React.FC<props> = ({
           <ArrowLongRightIcon className="h-6 w-6 " />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

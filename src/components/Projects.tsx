@@ -24,7 +24,7 @@ function Projects() {
 
   return (
     <div className="bg-backg text-textnani" id="projects">
-      <div className="mx-auto my-0 w-[85%] max-w-[1200px] py-[5em]">
+      <div className="mx-auto my-0 w-[85%] max-w-[1200px] py-[3em]">
         <h1 className="mb-[2em] text-center font-header text-xl uppercase text-primarypo">
           Projects
         </h1>
