@@ -25,7 +25,7 @@ function Navbar() {
     <div
       className={`bg-backg  ${
         fix
-          ? 'fixed left-[50%] z-20 w-screen translate-x-[-50%] bg-opacity-80 ease-linear'
+          ? 'fixed left-[50%] z-20 w-screen translate-x-[-50%] bg-opacity-90'
           : 'static'
       }`}
     >

@@ -32,14 +32,14 @@ const About: React.FC = () => {
           <motion.p
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.25 }}
           >
             {aboutMe.about}
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2 }}
+            transition={{ duration: 1.25 }}
           >
             {aboutMe.description}
           </motion.p>
@@ -47,7 +47,7 @@ const About: React.FC = () => {
             <motion.p
               initial={{ opacity: 0, y: -100 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 1.25 }}
               className="text-accentpo"
             >
               {aboutMe.education.school}

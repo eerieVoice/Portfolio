@@ -1,5 +1,5 @@
 import Navbar from './Navbar';
-import profile from '../assets/FormalPortrait.jpg';
+import profile from '../assets/gradpic.jpg';
 import ResumeBtn from './ResumeBtn';
 import { motion } from 'framer-motion';
 function Home() {
@@ -46,9 +46,14 @@ function Home() {
             <ResumeBtn />
           </div>
           <motion.div
-            animate={{ scale: 1 }}
-            initial={{ scale: 0 }}
-            transition={{ type: 'spring', duration: 1 }}
+            animate={{ y: -5 }}
+            initial={{ y: 5 }}
+            transition={{
+              ease: 'linear',
+              duration: 1,
+              repeat: Infinity,
+              repeatType: 'reverse',
+            }}
             className="mx-auto my-0 mt-[1em] w-[80%] max-w-[250px]  sm:mt-0  sm:w-[50%] sm:max-w-[350px]"
           >
             <img

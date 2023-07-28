@@ -76,7 +76,7 @@ function Contact() {
             style={{ resize: 'none' }}
             rows={5}
             placeholder="Message"
-            className=" rounded-md bg-textnani p-[0.5em] text-backg"
+            className="rounded-md bg-textnani p-[0.5em] text-backg"
             required
           />
           <input
