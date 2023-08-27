@@ -17,16 +17,17 @@ const ProjectsList: React.FC<props> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
       className="mb-10 flex w-full flex-col gap-[1em] sm:flex sm:flex-row sm:items-center sm:justify-items-start sm:gap-0"
     >
       <div className="mx-auto aspect-square max-h-[300px] max-w-[300px] rounded border-2 border-textnani sm:mx-0">
         <img
           src={img}
           alt="Project Sample Image"
-          className="h-full w-full object-cover"
+          className="h-full object-cover"
         />
       </div>
 

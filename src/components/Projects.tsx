@@ -1,6 +1,7 @@
 import ProjectsList from './ProjectsList';
 import dashboard from '../assets/dashboard.png';
 import tictactoe from '../assets/tictactoe.png';
+import solar from '../assets/solar.jpg';
 function Projects() {
   const projectDetails = {
     pjOne: {
@@ -20,6 +21,14 @@ function Projects() {
       img: tictactoe,
       text: ' App Link (Need Pera Wallet Account)',
     },
+    pjThree: {
+      details:
+        'Created a website centered around a campaign in Mindanao that promotes the adoption of solar energy',
+      pjLink: 'https://mindanaogoessolar.org/',
+      tools: 'ReactJS Typescript Firebase Tailwind',
+      img: solar,
+      text: ' Website Link',
+    },
   };
 
   return (
@@ -29,6 +38,7 @@ function Projects() {
           Projects
         </h1>
         <div className="">
+          <ProjectsList {...projectDetails.pjThree} />
           <ProjectsList {...projectDetails.pjOne} />
           <ProjectsList {...projectDetails.pjTwo} />
         </div>

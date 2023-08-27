@@ -27,6 +27,7 @@ function Experience() {
             <motion.h2
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 2 }}
               className="text-md text-accentpo"
             >
@@ -35,6 +36,7 @@ function Experience() {
             <motion.p
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 2 }}
               className="text-md"
             >
@@ -43,6 +45,7 @@ function Experience() {
             <motion.p
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 2 }}
               className="max-w-[40ch] text-md"
             >
@@ -51,6 +54,7 @@ function Experience() {
             <motion.p
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 2 }}
               className="opacity-70"
             >

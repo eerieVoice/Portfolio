@@ -20,25 +20,25 @@ function Home() {
         <div className="sm:flex">
           <div className="mx-0 my-auto flex flex-col justify-center gap-[1em] p-[1em] sm:w-[50%]">
             <motion.p
-              animate={{ y: 0 }}
-              initial={{ y: -1000 }}
-              transition={{ type: 'tween', duration: 0.5, delay: 0 }}
+              animate={{ x: 0, scale: 1 }}
+              initial={{ x: -500, scale: 0 }}
+              transition={{ type: 'spring', duration: 0.5, delay: 0 }}
               className="font-header text-md font-medium leading-[1.25em]"
             >
               {description.intro}
             </motion.p>
             <motion.h1
-              animate={{ y: 0, scale: 1 }}
-              initial={{ y: -1000, scale: 0 }}
-              transition={{ type: 'spring', duration: 1.5, delay: 1 }}
+              animate={{ x: 0, scale: 1 }}
+              initial={{ x: -500, scale: 0 }}
+              transition={{ type: 'spring', duration: 1, delay: 0.75 }}
               className="text-xl font-semibold leading-[1.25em] text-accentpo"
             >
               {description.name}
             </motion.h1>
             <motion.p
               animate={{ x: 0, scale: 1 }}
-              initial={{ x: -1000, scale: 0 }}
-              transition={{ type: 'spring', duration: 1.5, delay: 2 }}
+              initial={{ x: -500, scale: 0 }}
+              transition={{ type: 'spring', duration: 1, delay: 1.5 }}
               className="my-2 text-md font-medium leading-[1.5em] "
             >
               {description.secondary}

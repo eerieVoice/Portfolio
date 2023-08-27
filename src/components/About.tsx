@@ -32,6 +32,7 @@ const About: React.FC = () => {
           <motion.p
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.25 }}
           >
             {aboutMe.about}
@@ -39,6 +40,7 @@ const About: React.FC = () => {
           <motion.p
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 1.25 }}
           >
             {aboutMe.description}
@@ -47,6 +49,7 @@ const About: React.FC = () => {
             <motion.p
               initial={{ opacity: 0, y: -100 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 1.25 }}
               className="text-accentpo"
             >
