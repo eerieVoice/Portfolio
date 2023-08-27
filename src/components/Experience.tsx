@@ -8,13 +8,21 @@ function Experience() {
     duration: string;
   }
 
-  const exp: expereince = {
-    company: 'Fligno Software Philippines',
-    location: 'Cagayan de Oro — Software Engineer OJT',
-    description:
-      'Designed and Developed a blockchain web application using React JS and Algorand',
-    duration: 'February - April 2023',
-  };
+  const exp: expereince[] = [
+    {
+      company: 'Apollo Software Corporation',
+      location: 'Cagayan de Oro — Software Developer',
+      description: '',
+      duration: 'August 2023 - Present',
+    },
+    {
+      company: 'Fligno Software Philippines',
+      location: 'Cagayan de Oro — Software Engineer OJT',
+      description:
+        'Designed and Developed a blockchain web application using React JS and Algorand',
+      duration: 'February 2023 - April 2023',
+    },
+  ];
 
   return (
     <div className="bg-backg py-[3em] text-textnani" id="experience">
@@ -24,42 +32,46 @@ function Experience() {
             <h1 className="mb-[2em] font-header text-xl uppercase text-primarypo">
               Experience
             </h1>
-            <motion.h2
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 2 }}
-              className="text-md text-accentpo"
-            >
-              {exp.company}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 2 }}
-              className="text-md"
-            >
-              {exp.location}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 2 }}
-              className="max-w-[40ch] text-md"
-            >
-              {exp.description}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 2 }}
-              className="opacity-70"
-            >
-              {exp.duration}
-            </motion.p>
+            {exp.map((exp, index) => (
+              <div key={index} className="mb-[1em]">
+                <motion.h2
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 2 }}
+                  className="text-md text-accentpo"
+                >
+                  {exp.company}
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 2 }}
+                  className="text-md"
+                >
+                  {exp.location}
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 2 }}
+                  className="max-w-[40ch] text-md"
+                >
+                  {exp.description}
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 2 }}
+                  className="opacity-70"
+                >
+                  {exp.duration}
+                </motion.p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
