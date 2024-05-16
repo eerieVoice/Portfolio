@@ -13,7 +13,7 @@ function Experience() {
       company: 'Apollo Software Corporation',
       location: 'Cagayan de Oro — Software Developer',
       description: '',
-      duration: 'August 2023 - Present',
+      duration: 'August 2023 - March 2024',
     },
     {
       company: 'Fligno Software Philippines',
